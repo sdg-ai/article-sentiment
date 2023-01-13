@@ -37,7 +37,7 @@ def get_sentiment_example():
 @app.post("/sentiment")
 def process_sentiment(input_text: InputText):
     sentiment = x.text_to_sentiment(input_text.text)
-    return {"article-sentiment": sentiment}
+    return sentiment
 
 @app.post("/batch-sentiment")
 def batch_process_sentiment(trend_results: InputTrends):
